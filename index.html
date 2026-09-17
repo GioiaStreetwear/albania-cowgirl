@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Description" content="Gioia mundo — wereldse joy, minimalistisch design.">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="utf-8"/&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</p>
+<p class="p1">&lt;title&gt;Gioia Mundo&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1">&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">:root{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--bg:#0b0c10;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--text:#f5f7ff;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--muted:#b8bfd8;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--line:#232843;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--card: rgba(18,20,32,.75);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--glass: rgba(0,0,0,.40);</p>
+<p class="p1">}</p>
+<p class="p1">*{box-sizing:border-box}</p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(900px 500px at 20% 10%, rgba(124,92,255,.22), transparent 60%),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(700px 500px at 90% 20%, rgba(46,229,157,.14), transparent 55%),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>linear-gradient(180deg,#070810,var(--bg));</p>
+<p class="p1">}</p>
+<p class="p1">.wrap{max-width:1200px;margin:0 auto;padding:24px}</p>
+<p class="p1">.layout{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap:20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>grid-template-columns: 640px 1fr;</p>
+<p class="p1">}</p>
+<p class="p1">@media(max-width:960px){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.layout{grid-template-columns:1fr}</p>
+<p class="p1">}</p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:26px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>overflow:hidden;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* MAP */</p>
+<p class="p1">.mapCard{padding:14px}</p>
+<p class="p1">.map{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height:520px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>overflow:hidden;</p>
+<p class="p1">}</p>
+<p class="p1">.map iframe{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>inset:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height:100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:0;</p>
+<p class="p1">}</p>
+<p class="p1">.mapOverlay{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>left:14px; right:14px; top:14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index:2;</p>
+<p class="p1">}</p>
+<p class="p1">.badge{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--glass);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid rgba(255,255,255,.14);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:75%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>white-space:nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-overflow:ellipsis;</p>
+<p class="p1">}</p>
+<p class="p1">.btn{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid rgba(255,255,255,.16);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-decoration:none;</p>
+<p class="p1">}</p>
+<p class="p1">.ctaWrap{margin-top:14px}</p>
+<p class="p1">.cta{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:14px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(135deg,#ffffff,#eaeaff);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:#000;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:0 12px 40px rgba(124,92,255,.25);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* INFO */</p>
+<p class="p1">.side{padding:22px;display:grid;gap:16px}</p>
+<p class="p1">.logo{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Montserrat',sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:300;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing:.75em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:18px;</p>
+<p class="p1">}</p>
+<p class="p1">.text{color:var(--muted);line-height:1.7}</p>
+<p class="p1">.coords{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:8px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--muted);</p>
+<p class="p1">}</p>
+<p class="p1">.divider{height:1px;background:var(--line);margin:8px 0}</p>
+<p class="p1">.insta{max-width:420px}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;main class="wrap"&gt;</p>
+<p class="p1">&lt;div class="layout"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- LEFT --&gt;</p>
+<p class="p1">&lt;section class="card mapCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="map"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="mapOverlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="badge" id="badgeText"&gt;📍&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn" id="openMapsBtn" target="_blank"&gt;🗺️ Open Maps&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe id="mapFrame" loading="lazy"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ctaWrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="cta" id="streetBtn" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>👣 Bekijk in Street View</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- RIGHT --&gt;</p>
+<p class="p1">&lt;aside class="card side"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="logo"&gt;GIOIA MUNDO&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>You find the most amazing art on the streets all over the world.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>We simply love it and connect it with streetwear.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;span class="coords" id="addrText"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- INSTAGRAM POST (UPDATED) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="insta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;blockquote class="instagram-media"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>data-instgrm-permalink="https://www.instagram.com/p/CdeACLgqmZm/"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>data-instgrm-version="14"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>style="background:#fff;border-radius:14px;border:0;margin:0;max-width:100%;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/blockquote&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script async src="https://www.instagram.com/embed.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="margin-top:10px;font-size:13px;color:#b8bfd8;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Not loading? Open directly on</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.instagram.com/p/CdeACLgqmZm/"</p>
+<p class="p1"><span class="Apple-converted-space">         </span>target="_blank" rel="noopener"</p>
+<p class="p1"><span class="Apple-converted-space">         </span>style="color:#0095f6;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Instagram</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/aside&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// 📍 Nieuwe locatie</p>
+<p class="p1">const address = "NDSM-Plein, Amsterdam, Netherlands";</p>
+<p class="p1">const lat = 52.401361;</p>
+<p class="p1">const lng = 4.894540;</p>
+<p class="p1">const zoom = 18;</p>
+<p class="p2"><br></p>
+<p class="p1">// Street View tuning (kunnen we later exact afstellen)</p>
+<p class="p1">const heading = 180;</p>
+<p class="p1">const pitch = 5;</p>
+<p class="p1">const fov = 90;</p>
+<p class="p2"><br></p>
+<p class="p1">const openMapsUrl =</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`https://www.google.com/maps/@?api=1&amp;map_action=map&amp;center=${lat},${lng}&amp;zoom=${zoom}&amp;basemap=satellite`;</p>
+<p class="p2"><br></p>
+<p class="p1">const streetViewUrl =</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;viewpoint=${lat},${lng}&amp;heading=${heading}&amp;pitch=${pitch}&amp;fov=${fov}`;</p>
+<p class="p2"><br></p>
+<p class="p1">const embedUrl =</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`https://www.google.com/maps?output=embed&amp;z=${zoom}&amp;t=k&amp;ll=${lat},${lng}`;</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("badgeText").textContent = `📍 ${address}`;</p>
+<p class="p1">document.getElementById("addrText").textContent = `${address} — ${lat}, ${lng}`;</p>
+<p class="p1">document.getElementById("openMapsBtn").href = openMapsUrl;</p>
+<p class="p1">document.getElementById("streetBtn").href = streetViewUrl;</p>
+<p class="p1">document.getElementById("mapFrame").src = embedUrl;</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
