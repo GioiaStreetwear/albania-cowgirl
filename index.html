@@ -141,6 +141,12 @@
       pointer-events:auto;
     }
 
+    .mapButton:hover {
+      background:rgba(0,0,0,.65);
+    }
+
+    /* STREET VIEW BUTTON */
+
     .ctaWrap {
       margin-top:14px;
     }
@@ -169,6 +175,17 @@
 
       box-shadow:
         0 12px 40px rgba(124,92,255,.25);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .cta:hover {
+      transform:translateY(-1px);
+
+      box-shadow:
+        0 15px 45px rgba(124,92,255,.32);
     }
 
     /* ===================== */
@@ -202,6 +219,7 @@
 
       letter-spacing:.30em;
       text-transform:uppercase;
+      line-height:1.6;
     }
 
     /* ===================== */
@@ -462,14 +480,16 @@
   </style>
 </head>
 
+
 <body>
 
   <main class="wrap">
 
     <div class="layout">
 
+
       <!-- ===================== -->
-      <!-- MAP                   -->
+      <!-- MAP + PIN             -->
       <!-- ===================== -->
 
       <section class="card mapCard">
@@ -495,15 +515,17 @@
 
           </div>
 
+
           <iframe
             id="mapFrame"
-            title="Map of Te Vila in Tirana"
+            title="Te Vila in Tirana"
             loading="lazy"
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
 
         </div>
+
 
         <div class="ctaWrap">
 
@@ -527,6 +549,9 @@
 
       <aside class="card side">
 
+
+        <!-- LOGO -->
+
         <div class="logo">
           GIOIA MUNDO
         </div>
@@ -536,7 +561,9 @@
         </div>
 
 
-        <!-- CLUB FIRST -->
+        <!-- ===================== -->
+        <!-- CLUB FIRST            -->
+        <!-- ===================== -->
 
         <div class="clubPhoto">
 
@@ -548,12 +575,14 @@
         </div>
 
 
-        <!-- COWGIRL SECOND -->
+        <!-- ===================== -->
+        <!-- COWGIRL SECOND        -->
+        <!-- ===================== -->
 
         <div class="artwork">
 
           <img
-            src="cowgirl-te-vila.jpeg"
+            src="cowgirl.jpg"
             alt="Cowgirl artwork inside Te Vila in Tirana"
           >
 
@@ -564,7 +593,9 @@
         </div>
 
 
-        <!-- TEXT -->
+        <!-- ===================== -->
+        <!-- TEXT                  -->
+        <!-- ===================== -->
 
         <p class="text">
           You find the most amazing art on the streets
@@ -572,19 +603,24 @@
           connect it with streetwear.
         </p>
 
+
         <div class="divider"></div>
+
 
         <p class="highlight">
           Find the art somewhere in the club and have
           a great cocktail in this superb bar.
         </p>
 
+
         <div class="divider"></div>
+
 
         <span
           class="coords"
           id="addrText">
         </span>
+
 
       </aside>
 
@@ -595,7 +631,9 @@
 
   <script>
 
-    /* LOCATION */
+    /* ======================== */
+    /* LOCATION                 */
+    /* ======================== */
 
     const address = "Te Vila, Tirana, Albania";
 
@@ -605,22 +643,27 @@
     const zoom = 18;
 
 
-    /* STREET VIEW */
+    /* ======================== */
+    /* STREET VIEW              */
+    /* ======================== */
 
     const heading = 180;
     const pitch = 5;
     const fov = 90;
 
 
-    /* GOOGLE MAPS */
+    /* ======================== */
+    /* OPEN GOOGLE MAPS         */
+    /* ======================== */
 
     const openMapsUrl =
-      `https://www.google.com/maps/@?api=1` +
-      `&map_action=map` +
-      `&center=${lat},${lng}` +
-      `&zoom=${zoom}` +
-      `&basemap=satellite`;
+      `https://www.google.com/maps/search/?api=1` +
+      `&query=${lat},${lng}`;
 
+
+    /* ======================== */
+    /* STREET VIEW              */
+    /* ======================== */
 
     const streetViewUrl =
       `https://www.google.com/maps/@?api=1` +
@@ -631,14 +674,21 @@
       `&fov=${fov}`;
 
 
+    /* ======================== */
+    /* MAP WITH PIN             */
+    /* ======================== */
+
     const embedUrl =
-      `https://www.google.com/maps?output=embed` +
+      `https://maps.google.com/maps` +
+      `?q=${lat},${lng}` +
       `&z=${zoom}` +
       `&t=k` +
-      `&ll=${lat},${lng}`;
+      `&output=embed`;
 
 
-    /* APPLY */
+    /* ======================== */
+    /* APPLY                    */
+    /* ======================== */
 
     document
       .getElementById("badgeText")
