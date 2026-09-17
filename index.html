@@ -3,41 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Gioia Mundo — street art, streetwear and places around the world.">
 
   <title>Gioia Mundo — Te Vila</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0c10;
-      --text: #f5f7ff;
-      --muted: #b8bfd8;
-      --line: #232843;
-      --card: rgba(18,20,32,.78);
-      --glass: rgba(0,0,0,.48);
+      --bg:#0b0c10;
+      --text:#f5f7ff;
+      --muted:#b8bfd8;
+      --line:#232843;
+      --card:rgba(18,20,32,.78);
+      --glass:rgba(0,0,0,.48);
     }
 
     * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing:border-box;
     }
 
     body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
+      margin:0;
+      min-height:100vh;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,
+                  "Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
 
       background:
         radial-gradient(
@@ -58,387 +50,417 @@
     }
 
     .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:24px;
     }
 
     .layout {
-      display: grid;
-      grid-template-columns: 640px 1fr;
-      gap: 20px;
-      align-items: start;
+      display:grid;
+      grid-template-columns:640px 1fr;
+      gap:20px;
+      align-items:start;
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      overflow: hidden;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:26px;
+      overflow:hidden;
     }
 
-
-    /* -------------------- */
-    /* MAP                  */
-    /* -------------------- */
+    /* ===================== */
+    /* MAP                   */
+    /* ===================== */
 
     .mapCard {
-      padding: 14px;
+      padding:14px;
     }
 
     .map {
-      position: relative;
-      height: 520px;
-      overflow: hidden;
-      border-radius: 18px;
-      background: #11131c;
+      position:relative;
+      height:520px;
+      border-radius:18px;
+      overflow:hidden;
+      background:#11131c;
     }
 
     .map iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
     }
 
     .mapOverlay {
-      position: absolute;
-      z-index: 2;
-      top: 14px;
-      left: 14px;
-      right: 14px;
+      position:absolute;
+      z-index:2;
+      top:14px;
+      left:14px;
+      right:14px;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
     .badge,
     .mapButton {
-      padding: 10px 14px;
+      padding:10px 14px;
+      border-radius:999px;
 
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.16);
 
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background:var(--glass);
 
-      color: var(--text);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
 
-      font-size: 13px;
-      font-weight: 700;
+      color:var(--text);
 
-      box-shadow: 0 8px 24px rgba(0,0,0,.20);
+      font-size:13px;
+      font-weight:700;
+
+      box-shadow:0 8px 24px rgba(0,0,0,.20);
     }
 
     .badge {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      max-width:70%;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
 
     .mapButton {
-      text-decoration: none;
-      white-space: nowrap;
-      pointer-events: auto;
+      text-decoration:none;
+      white-space:nowrap;
+      pointer-events:auto;
     }
-
-    .mapButton:hover {
-      background: rgba(0,0,0,.65);
-    }
-
-
-    /* STREET VIEW BUTTON */
 
     .ctaWrap {
-      margin-top: 14px;
+      margin-top:14px;
     }
 
     .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
 
-      padding: 14px 18px;
+      padding:14px 18px;
 
-      border-radius: 999px;
+      border-radius:999px;
 
-      background: linear-gradient(
+      background:linear-gradient(
         135deg,
         #ffffff,
         #eaeaff
       );
 
-      color: #000;
+      color:#000;
 
-      font-size: 14px;
-      font-weight: 800;
+      font-size:14px;
+      font-weight:800;
 
-      text-decoration: none;
+      text-decoration:none;
 
       box-shadow:
         0 12px 40px rgba(124,92,255,.25);
-
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease;
     }
 
-    .cta:hover {
-      transform: translateY(-1px);
-
-      box-shadow:
-        0 15px 45px rgba(124,92,255,.32);
-    }
-
-
-    /* -------------------- */
-    /* RIGHT SIDE           */
-    /* -------------------- */
+    /* ===================== */
+    /* RIGHT SIDE            */
+    /* ===================== */
 
     .side {
-      padding: 26px;
-
-      display: grid;
-      gap: 20px;
+      padding:26px;
+      display:grid;
+      gap:18px;
     }
 
     .logo {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
+      font-family:"Montserrat",sans-serif;
+      font-weight:300;
 
-      letter-spacing: .55em;
-      text-transform: uppercase;
+      letter-spacing:.55em;
+      text-transform:uppercase;
 
-      font-size: 18px;
-      line-height: 1.6;
+      font-size:18px;
+      line-height:1.6;
     }
 
+    .subtitle {
+      margin-top:-10px;
 
-    /* -------------------- */
-    /* ARTWORK              */
-    /* -------------------- */
+      color:var(--muted);
+
+      font-family:"Montserrat",sans-serif;
+      font-size:10px;
+
+      letter-spacing:.30em;
+      text-transform:uppercase;
+    }
+
+    /* ===================== */
+    /* CLUB PHOTO            */
+    /* ===================== */
+
+    .clubPhoto {
+      overflow:hidden;
+
+      border-radius:20px;
+      border:1px solid var(--line);
+
+      background:#090a0f;
+    }
+
+    .clubPhoto img {
+      display:block;
+
+      width:100%;
+      height:230px;
+
+      object-fit:cover;
+      object-position:center;
+
+      transition:transform .5s ease;
+    }
+
+    .clubPhoto:hover img {
+      transform:scale(1.02);
+    }
+
+    /* ===================== */
+    /* COWGIRL               */
+    /* ===================== */
 
     .artwork {
-      position: relative;
+      position:relative;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 20px;
-      border: 1px solid var(--line);
+      border-radius:20px;
+      border:1px solid var(--line);
 
-      background: #090a0f;
+      background:#090a0f;
     }
 
     .artwork img {
-      display: block;
+      display:block;
 
-      width: 100%;
-      height: 440px;
+      width:100%;
+      height:440px;
 
-      object-fit: cover;
-      object-position: center 40%;
+      object-fit:cover;
+      object-position:center 40%;
 
-      transition: transform .6s ease;
+      transition:transform .5s ease;
     }
 
     .artwork:hover img {
-      transform: scale(1.02);
+      transform:scale(1.02);
     }
 
     .artwork::after {
-      content: "";
+      content:"";
 
-      position: absolute;
-      inset: 0;
+      position:absolute;
+      inset:0;
 
       background:
         linear-gradient(
           180deg,
-          transparent 50%,
-          rgba(0,0,0,.75) 100%
+          transparent 52%,
+          rgba(0,0,0,.78) 100%
         );
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
     .findMe {
-      position: absolute;
-      z-index: 2;
+      position:absolute;
+      z-index:2;
 
-      left: 18px;
-      bottom: 17px;
+      left:20px;
+      bottom:18px;
 
-      font-family: "Montserrat", sans-serif;
-      font-size: 13px;
-      font-weight: 500;
+      color:#fff;
 
-      letter-spacing: .22em;
-      text-transform: uppercase;
+      font-family:"Montserrat",sans-serif;
+      font-size:13px;
+      font-weight:500;
 
-      color: white;
+      letter-spacing:.28em;
+      text-transform:uppercase;
     }
 
-
-    /* -------------------- */
-    /* TEXT                 */
-    /* -------------------- */
+    /* ===================== */
+    /* TEXT                  */
+    /* ===================== */
 
     .text {
-      margin: 0;
+      margin:0;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      font-size: 16px;
-      line-height: 1.75;
+      font-size:16px;
+      line-height:1.75;
     }
 
     .highlight {
-      margin: 0;
+      margin:0;
 
-      color: var(--text);
+      color:var(--text);
 
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.6;
+      font-size:19px;
+      font-weight:400;
+      line-height:1.6;
     }
 
     .divider {
-      height: 1px;
-
-      background: var(--line);
-
-      margin: 2px 0;
+      height:1px;
+      background:var(--line);
+      margin:2px 0;
     }
 
     .coords {
-      width: fit-content;
+      width:fit-content;
 
-      padding: 8px 12px;
+      padding:8px 12px;
 
-      border: 1px solid var(--line);
-      border-radius: 999px;
+      border:1px solid var(--line);
+      border-radius:999px;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      font-size: 13px;
-      line-height: 1.4;
+      font-size:13px;
+      line-height:1.4;
     }
 
+    /* ===================== */
+    /* TABLET                */
+    /* ===================== */
 
-    /* -------------------- */
-    /* TABLET / MOBILE      */
-    /* -------------------- */
-
-    @media (max-width: 960px) {
+    @media(max-width:960px) {
 
       .layout {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
+      }
+
+      .clubPhoto img {
+        height:auto;
+        max-height:450px;
       }
 
       .artwork img {
-        height: auto;
-        max-height: 650px;
-        object-fit: cover;
+        height:auto;
+        max-height:700px;
       }
-
     }
 
+    /* ===================== */
+    /* MOBILE                */
+    /* ===================== */
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
 
       .wrap {
-        padding: 12px;
+        padding:12px;
       }
 
       .layout {
-        gap: 14px;
+        gap:14px;
       }
 
       .card {
-        border-radius: 22px;
+        border-radius:22px;
       }
 
       .mapCard {
-        padding: 10px;
+        padding:10px;
       }
 
       .map {
-        height: 430px;
-        border-radius: 16px;
+        height:420px;
+        border-radius:16px;
       }
 
       .mapOverlay {
-        top: 10px;
-        left: 10px;
-        right: 10px;
+        top:10px;
+        left:10px;
+        right:10px;
       }
 
       .badge,
       .mapButton {
-        padding: 9px 11px;
-        font-size: 12px;
+        padding:9px 11px;
+        font-size:12px;
       }
 
       .badge {
-        max-width: 60%;
+        max-width:60%;
       }
 
       .cta {
-        width: 100%;
-        justify-content: center;
+        width:100%;
+        justify-content:center;
       }
 
       .side {
-        padding: 18px;
-        gap: 18px;
+        padding:18px;
+        gap:16px;
       }
 
       .logo {
-        font-size: 16px;
-        letter-spacing: .42em;
+        font-size:16px;
+        letter-spacing:.42em;
       }
 
+      .subtitle {
+        font-size:9px;
+        line-height:1.7;
+      }
+
+      .clubPhoto,
       .artwork {
-        border-radius: 17px;
+        border-radius:17px;
+      }
+
+      .clubPhoto img {
+        height:auto;
+        max-height:none;
       }
 
       .artwork img {
-        width: 100%;
-        height: auto;
-        max-height: none;
+        height:auto;
+        max-height:none;
       }
 
       .findMe {
-        left: 15px;
-        bottom: 14px;
+        left:16px;
+        bottom:15px;
 
-        font-size: 12px;
+        font-size:11px;
+        letter-spacing:.24em;
       }
 
       .text {
-        font-size: 15px;
+        font-size:15px;
       }
 
       .highlight {
-        font-size: 18px;
+        font-size:18px;
       }
 
       .coords {
-        font-size: 12px;
+        font-size:12px;
       }
-
     }
-
   </style>
 </head>
-
 
 <body>
 
@@ -446,10 +468,9 @@
 
     <div class="layout">
 
-
-      <!-- ======================== -->
-      <!-- MAP                      -->
-      <!-- ======================== -->
+      <!-- ===================== -->
+      <!-- MAP                   -->
+      <!-- ===================== -->
 
       <section class="card mapCard">
 
@@ -474,7 +495,6 @@
 
           </div>
 
-
           <iframe
             id="mapFrame"
             title="Map of Te Vila in Tirana"
@@ -484,7 +504,6 @@
           </iframe>
 
         </div>
-
 
         <div class="ctaWrap">
 
@@ -502,25 +521,39 @@
       </section>
 
 
-
-      <!-- ======================== -->
-      <!-- GIOIA MUNDO / ARTWORK    -->
-      <!-- ======================== -->
+      <!-- ===================== -->
+      <!-- CONTENT               -->
+      <!-- ===================== -->
 
       <aside class="card side">
-
 
         <div class="logo">
           GIOIA MUNDO
         </div>
 
+        <div class="subtitle">
+          Street Art · Streetwear · Places Around The World
+        </div>
 
-        <!-- COWGIRL ARTWORK -->
+
+        <!-- CLUB FIRST -->
+
+        <div class="clubPhoto">
+
+          <img
+            src="te-vila.jpg"
+            alt="Te Vila in Tirana"
+          >
+
+        </div>
+
+
+        <!-- COWGIRL SECOND -->
 
         <div class="artwork">
 
           <img
-            src="cowgirl-te-vila.jpg"
+            src="cowgirl-te-vila.jpeg"
             alt="Cowgirl artwork inside Te Vila in Tirana"
           >
 
@@ -531,7 +564,7 @@
         </div>
 
 
-        <!-- INTRO -->
+        <!-- TEXT -->
 
         <p class="text">
           You find the most amazing art on the streets
@@ -539,28 +572,19 @@
           connect it with streetwear.
         </p>
 
-
         <div class="divider"></div>
-
-
-        <!-- TREASURE HUNT -->
 
         <p class="highlight">
           Find the art somewhere in the club and have
           a great cocktail in this superb bar.
         </p>
 
-
         <div class="divider"></div>
-
-
-        <!-- LOCATION -->
 
         <span
           class="coords"
           id="addrText">
         </span>
-
 
       </aside>
 
@@ -569,12 +593,9 @@
   </main>
 
 
-
   <script>
 
-    /* ======================== */
-    /* LOCATION                 */
-    /* ======================== */
+    /* LOCATION */
 
     const address = "Te Vila, Tirana, Albania";
 
@@ -584,18 +605,14 @@
     const zoom = 18;
 
 
-    /* ======================== */
-    /* STREET VIEW              */
-    /* ======================== */
+    /* STREET VIEW */
 
     const heading = 180;
     const pitch = 5;
     const fov = 90;
 
 
-    /* ======================== */
-    /* GOOGLE MAPS URLS         */
-    /* ======================== */
+    /* GOOGLE MAPS */
 
     const openMapsUrl =
       `https://www.google.com/maps/@?api=1` +
@@ -621,9 +638,7 @@
       `&ll=${lat},${lng}`;
 
 
-    /* ======================== */
-    /* APPLY CONTENT            */
-    /* ======================== */
+    /* APPLY */
 
     document
       .getElementById("badgeText")
