@@ -7,219 +7,218 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0c10;
-      --text: #f5f7ff;
-      --muted: #b8bfd8;
-      --line: #232843;
-      --card: rgba(18,20,32,.75);
-      --glass: rgba(0,0,0,.40);
+      --bg:#0b0c10;
+      --text:#f5f7ff;
+      --muted:#b8bfd8;
+      --line:#232843;
+      --card:rgba(18,20,32,.75);
+      --glass:rgba(0,0,0,.40);
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing:border-box;
     }
 
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color: var(--text);
+      margin:0;
+      min-height:100vh;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
       background:
-        radial-gradient(
-          900px 500px at 20% 10%,
-          rgba(124,92,255,.22),
-          transparent 60%
-        ),
-        radial-gradient(
-          700px 500px at 90% 20%,
-          rgba(46,229,157,.14),
-          transparent 55%
-        ),
-        linear-gradient(180deg, #070810, var(--bg));
-
-      min-height: 100vh;
+        radial-gradient(900px 500px at 20% 10%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(700px 500px at 90% 20%, rgba(46,229,157,.14), transparent 55%),
+        linear-gradient(180deg,#070810,var(--bg));
     }
 
     .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:24px;
     }
 
     .layout {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: 640px 1fr;
-      align-items: start;
+      display:grid;
+      gap:20px;
+      grid-template-columns:640px 1fr;
+      align-items:start;
     }
 
-    @media (max-width: 960px) {
+    @media(max-width:960px) {
       .layout {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
       }
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      overflow: hidden;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:26px;
+      overflow:hidden;
     }
 
     /* MAP */
 
     .mapCard {
-      padding: 14px;
+      padding:14px;
     }
 
     .map {
-      position: relative;
-      height: 520px;
-      border-radius: 18px;
-      overflow: hidden;
+      position:relative;
+      height:520px;
+      border-radius:18px;
+      overflow:hidden;
     }
 
     .map iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
     }
 
     .mapOverlay {
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      top: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      z-index: 2;
+      position:absolute;
+      left:14px;
+      right:14px;
+      top:14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      z-index:2;
     }
 
     .badge {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--glass);
-      border: 1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(10px);
-      font-weight: 800;
-      font-size: 13px;
-      max-width: 75%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      padding:10px 14px;
+      border-radius:999px;
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(10px);
+      font-weight:800;
+      font-size:13px;
+      max-width:75%;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
 
     .btn {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.16);
-      backdrop-filter: blur(10px);
-      color: var(--text);
-      font-weight: 800;
-      font-size: 13px;
-      text-decoration: none;
-      white-space: nowrap;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(10px);
+      color:var(--text);
+      font-weight:800;
+      font-size:13px;
+      text-decoration:none;
+      white-space:nowrap;
     }
 
     .ctaWrap {
-      margin-top: 14px;
+      margin-top:14px;
     }
 
     .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #ffffff, #eaeaff);
-      color: #000;
-      font-weight: 800;
-      font-size: 14px;
-      text-decoration: none;
-      box-shadow: 0 12px 40px rgba(124,92,255,.25);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#ffffff,#eaeaff);
+      color:#000;
+      font-weight:800;
+      font-size:14px;
+      text-decoration:none;
+      box-shadow:0 12px 40px rgba(124,92,255,.25);
     }
 
     /* INFO */
 
     .side {
-      padding: 30px;
-      display: grid;
-      gap: 22px;
+      padding:22px;
+      display:grid;
+      gap:18px;
     }
 
     .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      letter-spacing: .55em;
-      text-transform: uppercase;
-      font-size: 18px;
-      line-height: 1.6;
+      font-family:'Montserrat',sans-serif;
+      font-weight:300;
+      letter-spacing:.55em;
+      text-transform:uppercase;
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    /* TE VILA PHOTO */
+
+    .venuePhoto {
+      width:100%;
+      aspect-ratio:16 / 9;
+      object-fit:cover;
+      display:block;
+      border-radius:18px;
+      border:1px solid var(--line);
     }
 
     .text {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 16px;
-      margin: 0;
+      color:var(--muted);
+      line-height:1.7;
+      margin:0;
     }
 
     .highlight {
-      color: var(--text);
-      font-size: 20px;
-      line-height: 1.6;
-      font-weight: 500;
-      margin: 0;
+      color:var(--text);
+      font-size:19px;
+      line-height:1.6;
+      margin:0;
     }
 
     .coords {
-      width: fit-content;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-size: 13px;
-      color: var(--muted);
+      width:fit-content;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-size:13px;
+      color:var(--muted);
     }
 
     .divider {
-      height: 1px;
-      background: var(--line);
-      margin: 4px 0;
+      height:1px;
+      background:var(--line);
+      margin:4px 0;
     }
 
-    @media (max-width: 600px) {
+    /* MOBILE */
+
+    @media(max-width:600px) {
       .wrap {
-        padding: 12px;
+        padding:12px;
       }
 
       .map {
-        height: 440px;
-      }
-
-      .mapOverlay {
-        align-items: flex-start;
+        height:440px;
       }
 
       .badge {
-        max-width: 60%;
+        max-width:60%;
       }
 
       .side {
-        padding: 24px;
+        padding:18px;
       }
 
       .logo {
-        letter-spacing: .4em;
+        letter-spacing:.4em;
+      }
+
+      .highlight {
+        font-size:17px;
       }
     }
   </style>
@@ -236,6 +235,7 @@
         <div class="map">
 
           <div class="mapOverlay">
+
             <div class="badge" id="badgeText">
               📍 Te Vila
             </div>
@@ -244,18 +244,18 @@
               class="btn"
               id="openMapsBtn"
               target="_blank"
-              rel="noopener"
-            >
+              rel="noopener">
               🗺️ Open Maps
             </a>
+
           </div>
 
           <iframe
             id="mapFrame"
             loading="lazy"
             allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
 
         </div>
 
@@ -264,8 +264,7 @@
             class="cta"
             id="streetBtn"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             👣 Bekijk in Street View
           </a>
         </div>
@@ -279,6 +278,13 @@
         <div class="logo">
           GIOIA MUNDO
         </div>
+
+        <!-- FOTO TE VILA -->
+        <img
+          class="venuePhoto"
+          src="te-vila.jpg"
+          alt="Te Vila in Tirana"
+        >
 
         <p class="text">
           You find the most amazing art on the streets all over the world.
@@ -303,6 +309,7 @@
 
 
   <script>
+
     // LOCATION
     const address = "Te Vila, Tirana, Albania";
     const lat = 41.3214994;
@@ -322,7 +329,7 @@
     const streetViewUrl =
       `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}&heading=${heading}&pitch=${pitch}&fov=${fov}`;
 
-    // EMBEDDED SATELLITE MAP
+    // EMBEDDED MAP
     const embedUrl =
       `https://www.google.com/maps?output=embed&z=${zoom}&t=k&ll=${lat},${lng}`;
 
@@ -341,6 +348,7 @@
 
     document.getElementById("mapFrame").src =
       embedUrl;
+
   </script>
 
 </body>
